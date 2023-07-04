@@ -39,6 +39,17 @@ a {
   text-decoration: none;
   color: inherit;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
 html,
 body {
   font-family: "Helvetica Regular", sans-serif;
@@ -46,4 +57,85 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #5c5c5e;
+}
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.header {
+  border-bottom: 1px solid #cacad6;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.menu {
+  display: flex;
+  gap: 0 20px;
+}
+.basket {
+  position: relative;
+}
+.basket--on span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  bottom: 0;
+  right: -2px;
+  background-color: #000;
+  color: #fff;
+  line-height: 0;
+}
+.top {
+  min-height: calc(100vh - 81px);
+  background-image: url(../images/top_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.title {
+  font-size: 96px;
+  font-weight: 400;
+  color: #5c5c5e;
+  padding-top: 230px;
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 36px;
+  color: #5c5c5e;
+  margin-bottom: 5px;
+}
+.top__text {
+  font-size: 13px;
+  color: #5c5c5e;
+}
+.buy-btn {
+  cursor: pointer;
+  border: none;
+  background: var(
+    --gradient,
+    linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%)
+  );
+  display: flex;
+  text-transform: uppercase;
+  padding: 1px;
+}
+.buy-btn__text {
+  color: #f6f4f5;
+  padding: 20px 110px;
+}
+.buy-btn__price {
+  color: #5c5c5e;
+  background-color: #f6f4f5;
+  padding: 20px 105px;
+}
+.btn__text {
 }
