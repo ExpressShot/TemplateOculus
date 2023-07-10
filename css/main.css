@@ -453,8 +453,57 @@ body {
   font-size: 24px;
   color: #070707;
   line-height: 33px;
+  margin-bottom: 10px;
 }
 .contacts__inner {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+}
+.contacts__form {
+  flex-basis: 600px;
+}
+.form {
+  margin-bottom: 10px;
+  position: relative;
+}
+.form__input {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #cacad6;
+  padding: 22px 70px 22px 0;
+}
+.contacts__form-text {
+  font-size: 13px;
+  color: #5c5c5e;
+}
+.form__btn {
+  width: 50px;
+  height: 50px;
+  background-color: #cacad6;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #5c5c5e;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+.form__input::placeholder {
+  font-size: 13px;
+  color: #cacad6;
+  font-family: "Helvetica Regular", sans-serif;
+  line-height: 18px;
+  font-weight: 400;
+}
+.footer {
+  border-top: 1px solid #cacad6;
+  border-bottom: 1px solid #cacad6;
+  margin-bottom: 44px;
+  padding: 30px 0;
+}
+.social {
+  display: flex;
+  gap: 20px; /*Отступ между элементами*/
+  justify-self: end;
 }
