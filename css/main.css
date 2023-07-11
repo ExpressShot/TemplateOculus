@@ -66,6 +66,8 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #5c5c5e;
+  min-height: 320px;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1220px;
@@ -91,6 +93,7 @@ body {
 }
 .logo {
   justify-self: center;
+  display: flex;
 }
 .basket--on span {
   position: absolute;
@@ -232,6 +235,7 @@ body {
 .tabs__content-img {
   grid-row: 1/-1;
   align-self: stretch;
+  object-fit: cover;
 }
 .tabs__content-item--active {
   opacity: 1;
@@ -249,6 +253,7 @@ body {
 .game__inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 .game__descr-title {
   font-size: 36px;
@@ -506,4 +511,210 @@ body {
   display: flex;
   gap: 20px; /*Отступ между элементами*/
   justify-self: end;
+}
+.menu-btn {
+  width: 45px;
+  height: 34px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-btn span {
+  height: 2px;
+  width: 100%;
+  background-color: #070707;
+}
+@media (max-width: 1140px) {
+  .footer .menu {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .title {
+    padding-top: 130px;
+  }
+  .tabs {
+    display: block;
+  }
+  .features {
+    padding: 38px 0;
+  }
+  .feature__text {
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+  .tabs__btn {
+    display: block;
+    column-count: 2; /*Разделить на 2 блока*/
+  }
+  .tabs__btn-item {
+    display: block;
+  }
+  .game__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .accessories__items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .promo,
+  .buy,
+  .equipment,
+  .accessories,
+  .contacts {
+    margin-bottom: 45px;
+  }
+  .tabs__content-item {
+    height: 0;
+    display: block;
+    position: relative;
+  }
+  .tabs__content-item--active {
+    height: auto;
+  }
+}
+@media (max-width: 820px) {
+  .equipment__box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .contacts__form-text {
+    margin-bottom: 25px;
+  }
+  .contacts__inner {
+    display: block;
+  }
+  .menu-btn {
+    display: flex;
+  }
+  .menu {
+    transform: translateX(-100%);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: #070707;
+    color: #f6f4f5;
+    padding: 100px 0;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.6s;
+    width: 100%;
+  }
+  .menu__link {
+    font-size: 24px;
+    display: inline-block;
+    padding: 12px 0;
+  }
+  .menu.menu--active {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 79px;
+    padding-top: 145px;
+  }
+  .subtitle {
+    font-size: 33px;
+  }
+  .contacts__inner {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .buy-btn {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .top {
+    text-align: center;
+  }
+  .footer .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 568px) {
+  .nav {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .title {
+    font-size: 79px;
+    padding-top: 110px;
+  }
+  .subtitle {
+    font-size: 33px;
+  }
+  .buy-btn {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .top {
+    text-align: center;
+  }
+  .feature__titles {
+    display: block;
+  }
+  .feature__text {
+    margin-bottom: 25px;
+    font-size: 22px;
+  }
+  .equipment__box-title,
+  .accessories-text {
+    font-size: 22px;
+  }
+  .tabs__content-item {
+    display: block;
+  }
+  .section-title {
+    margin-bottom: 20px;
+  }
+  .video {
+    margin-top: 25px;
+    width: auto;
+    height: 250px;
+  }
+  .game__inner {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .equipment__box {
+    display: block;
+  }
+  .equipment__box-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .equipment__box-text {
+    margin-bottom: 15px;
+  }
+  .accessories__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer .nav {
+    flex-direction: column;
+    height: auto;
+  }
+  .social {
+    order: -1;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .title {
+    font-size: 46px;
+    padding-top: 30px;
+  }
+  .subtitle {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .top__text {
+    margin-bottom: 20px;
+  }
+  .tabs__btn {
+    column-count: 1;
+  }
 }
